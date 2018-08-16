@@ -17,6 +17,8 @@
     <string name="exit">Exit</string>
     <string name="settings">Function Defaults</string>
     <string name="fb_label">Function Label</string>
+    <string name="fb_column_label">Label</string>
+    <string name="fb_column_function">Funct#</string>
     <string name="function_buttons">function_buttons</string>
     <string name="app_name">Engine Driver</string>
     <string name="app_description">Engine Driver - Throttle for your Android phone.  This application can connect to a JMRI, MRC or DigiTrax WiThrottle server, and in turn control your locomotives. Speed, direction, and up to 29 DCC functions are supported for one to six locomotives. </string>
@@ -75,6 +77,7 @@
     <string name="consist_help">Click an engine to change its direction with respect to the top of the consist.  Long press an engine to remove it from the consist.  Press Back Arrow when done.</string>
     <string name="about">About</string>
     <string name="web">Web</string>
+    <string name="about_page_url">file:///android_asset/about_page.html</string>
     <string name="mrc_settings">MRC Settings</string>
     <string name="loco">Loco:</string>
     <string name="loco_direction_left_extra">"\u00B7F\u00B7"</string>
@@ -300,7 +303,11 @@
     <string name="prefWebViewLocationSummary">Include web view on Throttle pane</string>
     <string name="prefSelectLocoTitle">Select Loco Preferences</string>
     <string name="prefSelectiveLeadSoundTitle">Selective Lead Unit Sound?</string>
-    <string name="prefSelectiveLeadSoundSummary">Send Horn/Bell functions to only the Lead unit in an EngineDriver consist</string>
+    <string name="prefSelectiveLeadSoundSummary">Send Horn/Bell functions to only the Lead unit in an EngineDriver consist. (Only/any function with a \'label\' that includes \'bell\', \'horn\' or \'whistle\' as part of the label.)</string>
+    <string name="prefSelectiveLeadSoundF1Title">Always treat F1 as Sound</string>
+    <string name="prefSelectiveLeadSoundF1Summary">For the \'Selective Lead Unit Sound\' option</string>
+    <string name="prefSelectiveLeadSoundF2Title">Always treat F2 as Sound</string>
+    <string name="prefSelectiveLeadSoundF2Summary">For the \'Selective Lead Unit Sound\' option</string>
     <string name="prefStopOnPhonecallTitle">Stop On Phonecall?</string>
     <string name="prefStopOnPhonecallSummary">Stop loco(s) when a phone call is answered or placed</string>
     <string name="prefStopOnReleaseTitle">Stop On Release?</string>
@@ -449,7 +456,7 @@
 
     <string name="prefImportExportOverwite">File already exists. Overwite?</string>
     <string name="prefImportExportErrorReadingList">Error reading recent connections list:</string>
-    <string name="prefImportExportErrorReadingFrom">Import from \'engine_driver/%%1%%\' failed! You may not have saved the preferences for this host yet.</string>
+    <string name="prefImportExportErrorReadingFrom">Import from \'engine_driver/%1$s\' failed! You may not have saved the preferences for this host yet.</string>
     <string name="prefImportExportErrorNotConnected">Not connected to a host.</string>
 
     <string name="prefSwapForwardReverseButtonsTitle">Swap Direction Buttons</string>
@@ -596,7 +603,7 @@
     <string name="toastThreadedAppNoLocalIp">No local IP Address found.\nCheck your WiFi connection.</string>
     <string name="toastThreadedAppErrorCreatingWiThrottle">Error creating withrottle zeroconf listener: IOException:\n%1$s</string>
     <string name="toastThreadedAppWiThrottleNotSupported">WiThrottle version %1$s not supported.</string>
-    <string name="toastThreadedAppCantDeterminIp">Can\'t determine IP address of %1$s</string>
+    <string name="toastThreadedAppCantDetermineIp">Can\'t determine IP address of %1$s</string>
     <string name="toastThreadedAppCantConnect">Can\'t connect to host %1$s and port %2$s from %3$s - %4$s Check WiThrottle and network settings.</string>
     <string name="toastThreadedAppErrorInputStream">Error creating input stream, IOException: %1$s</string>
     <string name="toastThreadedAppErrorStartingSocket">Error starting socket_WiT thread: %1$s</string>
@@ -620,17 +627,17 @@
     <string name="toastSwipeUpScreenLocked">Throttle Screen Locked - Swipe up to unlock</string>
     <string name="toastSwipeUpScreenDimmed">Throttle Screen Dimmed - Swipe up to restore</string>
     <string name="toastSwipeUpViewHidden">Web View temporarily hidden. To hide permanently change in preferences</string>
-    <string name="toastThrottleAlertEstop">Alert: Engine %%1%% is set to ESTOP</string>
+    <string name="toastThrottleAlertEstop">Alert: Engine %1$s is set to ESTOP</string>
 
     <!--    Toast messages for the Preferences page-->
-    <string name="toastPreferencesOutsideLimits">Value entered is outside the limits (%%1%%-%%2%%). Reset to %%3%%.</string>
-    <string name="toastPreferencesNotNumeric">Value entered is not numeric (%%1%%-%%2%%). Reset to %%3%%.</string>
+    <string name="toastPreferencesOutsideLimits">Value entered is outside the limits (%1$s-%2$s). Reset to %3$s.</string>
+    <string name="toastPreferencesNotNumeric">Value entered is not numeric (%1$s-%2$s). Reset to %3$s.</string>
     <string name="toastPreferencesResetSucceeded">Preferences Reset to defaults!</string>
 <!--    <string name="toastPreferencesLocaleChange">Engine Driver restarted with chosen Language.</string> -->
 
     <!--    Toast messages for the Turnout Activity -->
     <string name="toastTurnoutInvalidNumber">Invalid turnout number.</string>
-    <string name="toastTurnoutCommandTo">Command sent to %%1%% turnout</string>
+    <string name="toastTurnoutCommandTo">Command sent to %1$s turnout</string>
     <string name="toastTurnoutCommandToClose">Close</string>
     <string name="toastTurnoutCommandToThrow">Throw</string>
     <string name="toastTurnoutCommandToToggle">Toggle</string>
@@ -638,7 +645,7 @@
     <!--    Toast messages for the Connection Activity -->
     <string name="toastConnectEnterAddress">Enter or select an address and port</string>
     <string name="toastConnectInvalidPort">Invalid port#, retry.</string>
-    <string name="toastConnectConnected">Connected to Server: %%1%%  Port : %%2%%</string>
+    <string name="toastConnectConnected">Connected to Server: %1$s  Port : %2$s</string>
     <string name="toastConnectUnableToSavePref">Unable to save host specific preferences. Can\'t get host name.</string>
     <string name="toastConnectUnableToLoadPref">Unable to load host specific preferences. Can\'t get host name.</string>
     <string name="toastConnectErrorReadingRecentConnections">Error reading recent connections list:</string>
@@ -648,17 +655,17 @@
     <string name="toastRoutesCommandSent">"Command sent to Set route "</string>
 
     <!--    Toast messages for the Import/Export -->
-    <string name="toastImportExportExportSucceeded">Preferences export to \'engine_driver/%%1%%\' succeeded.</string>
-    <string name="toastImportExportImportSucceeded">Preferences import from \'engine_driver/%%1%%\' succeeded.</string>
-    <string name="toastImportExportExportFailed">Preferences export to \'engine_driver/%%1%%\' failed!</string>
-    <string name="toastImportExportImportFailed">Preferences import from \'engine_driver/%%1%%\' failed!</string>
-    <string name="toastImportExportServerImportFailed">Preferences not imported from \'engine_driver/%%1%%\'. You may not have saved the preferences for this host yet.</string>
+    <string name="toastImportExportExportSucceeded">Preferences export to \'engine_driver/%1$s\' succeeded.</string>
+    <string name="toastImportExportImportSucceeded">Preferences import from \'engine_driver/%1$s\' succeeded.</string>
+    <string name="toastImportExportExportFailed">Preferences export to \'engine_driver/%1$s\' failed!</string>
+    <string name="toastImportExportImportFailed">Preferences import from \'engine_driver/%1$s\' failed!</string>
+    <string name="toastImportExportServerImportFailed">Preferences not imported from \'engine_driver/%1$s\'. You may not have saved the preferences for this host yet.</string>
     <string name="toastImportExportCannotImport">Can\'t import preferences. Not connected to a host.</string>
     <string name="toastImportExportCannotExport">Can\'t export host specific preferences. Not connected to a host.</string>
 
     <!--    Toast messages for the Select Loco Activity -->
     <string name="toastSelectLocoConfirmClear">Confirm that you want remove all the Recent Locomotives by pressing the \'Clear List\' button AGAIN.</string>
-    <string name="toastNumThrottles">Chosen Throttle Screen Type does not support that many throttles. Reducing to %%1%%.</string>
+    <string name="toastNumThrottles">Chosen Throttle Screen Type does not support that many throttles. Reducing to %1$s.</string>
 
     <string name="prefTtsTitle">Voice Response Preferences</string>
     <string name="prefTtsSummary">Options to speak key events</string>
@@ -715,4 +722,7 @@
     <string name="prefFlashlightSummary">Display flashlight button in Throttle, Turnout and Routes screens?</string>
     <string name="prefFlashlightTitle">Show flashlight button?</string>
     <string name="toastFlashlightFailed">Sorry! There was a problem switching on the flashlight&#8230;</string>
+
+    <string name="logViewerTitle">LogViewerActivity | Throttle Name: %1$s</string>
+
 </resources>

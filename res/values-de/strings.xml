@@ -19,6 +19,8 @@
     <string name="exit">Beenden</string>
     <string name="settings">Funktionsvorgaben</string>
     <string name="fb_label">Funktionsbezeichnung</string>
+    <string name="fb_column_label">Bezeichn.</string>
+    <string name="fb_column_function">F-Nr.</string>
     <string name="function_buttons">Funktionstasten</string>
 
     <string name="app_description">Engine Driver - Fahrpult für ihr Android Telefon. Diese Anwendung kann eine Verbindung mit einem JMRI, MRC oder Digitrax WiThrottle Server erstellen und ermöglicht damit die Steuerung von Lokomotiven. Geschwindigkeit, Fahrrichtung und bis zu 29 DCC Funktionen werden für eine oder zwei Lokomotiven unterstützt.</string>
@@ -32,7 +34,7 @@
     <string name="app_name_about">Über  - Engine Driver</string>
     <string name="app_name_web">Web - Engine Driver</string>
     <string name="app_name_functions">Standardfunktionseinstellungen - Engine Driver</string>
-    <string name="app_name_preferences">Voreinstellungen  - Engine Driver</string>
+    <string name="app_name_preferences">Voreinstellungen - Engine Driver</string>
     <string name="app_name_select_loco">Lok Auswählen/Freigeben - Engine Driver</string>
     <string name="app_name_ConsistEdit">Lokverbund bearbeiten - Engine Driver</string>
     <string name="app_name_ConsistLightsEdit">Lokverbund-Lichter - Engine Driver</string>
@@ -61,12 +63,13 @@
     <string name="forward">Vorwärts</string>
     <string name="reverse">Rückwärts</string>
     <string name="none">Keine</string>
-    <string name="fb_helptext">Bezeichnungen und Funktionsnummern auf der rechten Seite der Liste eingeben. Lasse die Beschriftung leer, um die Knöpfe auszublenden. Diese werden verwendet, wenn Funktionen des Lokverzeichnisses nicht verfügbar sind.</string>
+    <string name="fb_helptext">Bezeichnungen und Funktionsnummern auf der rechten Seite der Liste eingeben. Lasse die Beschriftung leer, um die Knöpfe auszublenden. Diese werden verwendet, wenn Funktionen vom Lokverzeichnis nicht verfügbar sind.</string>
     <string name="copy_function_labels">Bezeichnungen aus dem Lokverzeichnis kopieren</string>
     <string name="fb_header">Funktionen bearbeiten</string>
     <string name="consist_help">Eine Lok anklicken um ihre Richtung im Vergleich zum Kopf des Lokverbundes zu ändern. Lange auf eine Lok drücken, um sie aus dem Lokverbund zu entfernen. Zurück-Pfeil drücken wenn fertig.</string>
     <string name="about">Über</string>
     <string name="web">Web</string>
+    <string name="about_page_url">file:///android_asset/about_page-de.html</string>
     <string name="mrc_settings">MRC Einstellungen</string>
     <string name="loco">Lok:</string>
     <string name="loco_direction_left_extra">"\u00B7V\u00B7"</string>
@@ -255,12 +258,16 @@
     <string name="prefSelectLocoTitle">Wähle Lok Voreinstellungen</string>
     <string name="prefSelectiveLeadSoundTitle">Selektiver Sound der führenden Einheit?</string>
     <string name="prefSelectiveLeadSoundSummary">Sende Horn/Glocke Funktionen nur zur führenden Lok in einem EngineDriver Lokverbund</string>
+    <string name="prefSelectiveLeadSoundF1Title">Behandle F1 immer als Sound</string>
+    <string name="prefSelectiveLeadSoundF1Summary">Für die Option "Selective Lead Unit Sound"</string>
+    <string name="prefSelectiveLeadSoundF2Title">Behandle F2 immer als Sound</string>
+    <string name="prefSelectiveLeadSoundF2Summary">Für die Option "Selective Lead Unit Sound"</string>
     <string name="prefStopOnPhonecallTitle">Stop bei Telefonanruf?</string>
     <string name="prefStopOnPhonecallSummary">Stoppe Lok(s) wenn ein Telefonanruf angenommen oder gewählt wird</string>
     <string name="prefStopOnReleaseTitle">Stop beim Freigeben?</string>
     <string name="prefStopOnReleaseSummary">Stoppe Lok(s) bei Freigabe aus dem Fahrregler</string>
     <string name="prefSwipeThroughRoutesTitle">Wischen durch Fahrstraßen?</string>
-    <string name="prefSwipeThroughRoutesSummary">Fahrstraßenanzeige einschliessen beim Wischen zwischen Anzeigen.</string>
+    <string name="prefSwipeThroughRoutesSummary">Fahrstraßenanzeige einschließen beim Wischen zwischen Anzeigen.</string>
     <string name="prefSwipeThroughTurnoutsTitle">Wischen durch Weichen?</string>
     <string name="prefSwipeThroughTurnoutsSummary">Weichenanzeige einschließen beim Wischen zwischen Anzeigen.</string>
     <string name="prefDropOnAcquireTitle">Lok Freigeben vor dem Übernehmen?</string>
@@ -450,7 +457,7 @@
     <string name="toastThreadedAppNoLocalIp">Keine lokale IP Adresse gefunden.\n Überprüfe deine WiFi Verbindung.</string>
     <string name="toastThreadedAppErrorCreatingWiThrottle">Fehler beim Erstellen eines von WiThrottle selbständig konfigurierten Zuhörers: IOException:\n%1$s</string>
     <string name="toastThreadedAppWiThrottleNotSupported">WiThrottle Version %1$s wird nicht unterstützt.</string>
-    <string name="toastThreadedAppCantDeterminIp">Kann die IP-Adresse von %1$s nicht ermitteln.</string>
+    <string name="toastThreadedAppCantDetermineIp">Kann die IP-Adresse von %1$s nicht ermitteln.</string>
     <string name="toastThreadedAppCantConnect">Kann keine Verbindung zu Host %1$s und Port %2$s von %3$s - %4$s herstellen. Überprüfe die Einstellungen von WiThrottle und Netzwerk.</string>
     <string name="toastThreadedAppErrorInputStream">Fehler beim Erstellen des Eingabestreams, IOException: %1$s</string>
     <string name="toastThreadedAppErrorStartingSocket">Fehler beim Starten von socket_WiT-Thread: %1$s</string>
@@ -472,28 +479,28 @@
     <string name="toastSwipeUpScreenLocked">Fahrregler Bildschirm blockiert - Wische nach oben um Blockierung aufzuheben.</string>
     <string name="toastSwipeUpScreenDimmed">Fahrregler Bildschirm gedimmt - Wische nach oben zum Wiederherstellen.</string>
     <string name="toastSwipeUpViewHidden">Web Ansicht temporär ausgeblendet. Um sie permanent auszublenden, ändere die Voreinstellungen.</string>
-    <string name="toastThrottleAlertEstop">Warnung: Lok %%1%% hat NOT-STOP</string>
-    <string name="toastPreferencesOutsideLimits">Eingegebener Wert liegt außerhalb der Grenzen (%%1%%-%%2%%). Zurücksetzen auf %%3%%.</string>
-    <string name="toastPreferencesNotNumeric">Eingegebener Wert ist nicht numerisch (%%1%%-%%2%%). Zurücksetzen auf %%3%%.</string>
+    <string name="toastThrottleAlertEstop">Warnung: Lok %1$s hat NOT-STOP</string>
+    <string name="toastPreferencesOutsideLimits">Eingegebener Wert liegt außerhalb der Grenzen (%1$s-%2$s). Zurücksetzen auf %3$s.</string>
+    <string name="toastPreferencesNotNumeric">Eingegebener Wert ist nicht numerisch (%1$s-%2$s). Zurücksetzen auf %3$s.</string>
     <string name="toastPreferencesResetSucceeded">Voreinstellungen werden auf Standardwerte zurückgesetzt!</string>
     <string name="toastTurnoutInvalidNumber">Ungültige Weichennummer.</string>
-    <string name="toastTurnoutCommandTo">Befehl geschickt an Weiche %%1%%</string>
+    <string name="toastTurnoutCommandTo">Befehl geschickt an Weiche %1$s</string>
     <string name="toastTurnoutCommandToClose">Geradeaus</string>
     <string name="toastTurnoutCommandToThrow">Ablenkend</string>
     <string name="toastTurnoutCommandToToggle">Umlegen</string>
     <string name="toastConnectEnterAddress">Adresse und Port eingeben oder auswählen</string>
     <string name="toastConnectInvalidPort">Ungültige Portnummer, Neueingabe.</string>
-    <string name="toastConnectConnected">Verbunden mit Server: %%1%% Port : %%2%%</string>
+    <string name="toastConnectConnected">Verbunden mit Server: %1$s Port : %2$s</string>
     <string name="toastConnectUnableToSavePref">Host spezifische Voreinstellungen können nicht gesichert werden. Erhalte keinen Hostnamen.</string>
     <string name="toastConnectUnableToLoadPref">Host spezifische Voreinstellungen können nicht geladen werden. Erhalte keinen Hostnamen.</string>
     <string name="toastConnectErrorReadingRecentConnections">Fehler beim Lesen der Liste Letzte Verbindungen:</string>
     <string name="toastConnectErrorSavingRecentConnection">Fehler beim Speichern der letzten Verbindung:</string>
     <string name="toastRoutesCommandSent">"Befehl geschickt zum Stellen der Fahrstraße "</string>
-    <string name="toastImportExportExportSucceeded">Voreinstellungen exportieren zu \'engine_driver/%%1%%\' war erfolgreich.</string>
-    <string name="toastImportExportImportSucceeded">Voreinstellungen importieren von \'engine_driver/%%1%%\' war erfolgreich.</string>
-    <string name="toastImportExportExportFailed">Voreinstellungen exportieren zu \'engine_driver/%%1%%\' ist fehlgeschlagen!</string>
-    <string name="toastImportExportImportFailed">Voreinstellungen importieren von \'engine_driver/%%1%%\' ist fehlgeschlagen!</string>
-    <string name="toastImportExportServerImportFailed">Voreinstellungen nicht importiert von \'engine_driver/%%1%%\'. Möglicherweise hast du die Voreinstellungen für diesen Host bisher nicht gespeichert.</string>
+    <string name="toastImportExportExportSucceeded">Voreinstellungen exportieren zu \'engine_driver/%1$s\' war erfolgreich.</string>
+    <string name="toastImportExportImportSucceeded">Voreinstellungen importieren von \'engine_driver/%1$s\' war erfolgreich.</string>
+    <string name="toastImportExportExportFailed">Voreinstellungen exportieren zu \'engine_driver/%1$s\' ist fehlgeschlagen!</string>
+    <string name="toastImportExportImportFailed">Voreinstellungen importieren von \'engine_driver/%1$s\' ist fehlgeschlagen!</string>
+    <string name="toastImportExportServerImportFailed">Voreinstellungen nicht importiert von \'engine_driver/%1$s\'. Möglicherweise hast du die Voreinstellungen für diesen Host bisher nicht gespeichert.</string>
     <string name="toastImportExportCannotImport">Kann Voreinstellungen nicht importieren. Mit keinem Host verbunden.</string>
     <string name="toastImportExportCannotExport">Kann Host spezifische Voreinstellungen nicht exportieren. Mit keinem Host verbunden.</string>
     <string name="toastSelectLocoConfirmClear">Bestätige das Entfernen aller Einträge in der Liste kürzlich verwendeter Loks durch ERNEUTES Drücken des Knopfs \'Lösche Liste\'.  </string>
@@ -581,6 +588,9 @@
     <string name="functionButtonLookForRear">HINTEN</string>
     <string name="prefImportExportOverwite">Datei existiert schon. Überschreiben?</string>
     <string name="prefImportExportErrorReadingList">Fehler beim Lesen der Liste Letzte Verbindungen:</string>
-    <string name="prefImportExportErrorReadingFrom">Import von \'engine_driver/%%1%%\' fehlgeschlagen! Möglicherweise hast du die Voreinstellungen für diesen Host bisher nicht gespeichert.</string>
+    <string name="prefImportExportErrorReadingFrom">Import von \'engine_driver/%1$s\' fehlgeschlagen! Möglicherweise hast du die Voreinstellungen für diesen Host bisher nicht gespeichert.</string>
     <string name="prefImportExportErrorNotConnected">Mit keinem Host verbunden.</string>
+
+    <string name="logViewerTitle">Aktivitäten-Log | Fahrregler Name: %1$s</string>
+
 </resources>
