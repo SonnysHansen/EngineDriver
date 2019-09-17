@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "jmri.enginedriver"
+        // cannot be higher than 16 to retain compatibility with ESU MobileControl II
+        minSdkVersion 15
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+    lintOptions {
+//        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+//    implementation 'com.android.support:support-v4:26.1.0'
+//    implementation 'com.android.support:support-v4:28.0.3'
+//    implementation 'com.android.support:appcompat-v7:19.1.0'
+    implementation files('libs/autobahn-0.5.0.jar')
+    implementation files('libs/jackson-core-asl-1.9.7.jar')
+    implementation files('libs/jackson-mapper-asl-1.9.7.jar')
+    implementation files('libs/java-json.jar')
+    implementation files('libs/jmdns-3.5.5.jar')
+    implementation files('libs/slf4j-api-1.7.25.jar')
+    implementation 'eu.esu.mobilecontrol2:mobilecontrol2-sdk:1.1.2'
+    implementation 'com.github.apl-devs:appintro:v4.2.3'
+}
